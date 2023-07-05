@@ -1,0 +1,11 @@
+# ListShortCodeListShortCodeResponse
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                            | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `meta`                                                                                                                           | [ListShortCodeListShortCodeResponseMeta](../../models/operations/ListShortCodeListShortCodeResponseMeta.md)                      | :heavy_minus_sign:                                                                                                               | N/A                                                                                                                              |
+| `shortCodes`                                                                                                                     | List<[circl_dev.twilio_messaging.models.shared.MessagingV1ServiceShortCode](../../models/shared/MessagingV1ServiceShortCode.md)> | :heavy_minus_sign:                                                                                                               | N/A                                                                                                                              |

@@ -1,0 +1,9 @@
+# UpdateServiceRequest
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `requestBody`                                                                                       | [UpdateServiceUpdateServiceRequest1](../../models/operations/UpdateServiceUpdateServiceRequest1.md) | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `sid`                                                                                               | *String*                                                                                            | :heavy_check_mark:                                                                                  | The SID of the Service resource to update.                                                          |

@@ -1,0 +1,9 @@
+# FetchPhoneNumberRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `serviceSid`                                                                                                 | *String*                                                                                                     | :heavy_check_mark:                                                                                           | The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from. |
+| `sid`                                                                                                        | *String*                                                                                                     | :heavy_check_mark:                                                                                           | The SID of the PhoneNumber resource to fetch.                                                                |

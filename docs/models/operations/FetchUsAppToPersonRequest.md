@@ -1,0 +1,9 @@
+# FetchUsAppToPersonRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `messagingServiceSid`                                                                                              | *String*                                                                                                           | :heavy_check_mark:                                                                                                 | The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from. |
+| `sid`                                                                                                              | *String*                                                                                                           | :heavy_check_mark:                                                                                                 | The SID of the US A2P Compliance resource to fetch `QE2c6890da8086d771620e9b13fadeba0b`.                           |

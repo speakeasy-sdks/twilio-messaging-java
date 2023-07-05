@@ -1,0 +1,11 @@
+# ListAlphaSenderListAlphaSenderResponse
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                                | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `alphaSenders`                                                                                                                       | List<[circl_dev.twilio_messaging.models.shared.MessagingV1ServiceAlphaSender](../../models/shared/MessagingV1ServiceAlphaSender.md)> | :heavy_minus_sign:                                                                                                                   | N/A                                                                                                                                  |
+| `meta`                                                                                                                               | [ListAlphaSenderListAlphaSenderResponseMeta](../../models/operations/ListAlphaSenderListAlphaSenderResponseMeta.md)                  | :heavy_minus_sign:                                                                                                                   | N/A                                                                                                                                  |

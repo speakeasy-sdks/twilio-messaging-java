@@ -1,0 +1,11 @@
+# ListPhoneNumberListPhoneNumberResponse
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                                | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `meta`                                                                                                                               | [ListPhoneNumberListPhoneNumberResponseMeta](../../models/operations/ListPhoneNumberListPhoneNumberResponseMeta.md)                  | :heavy_minus_sign:                                                                                                                   | N/A                                                                                                                                  |
+| `phoneNumbers`                                                                                                                       | List<[circl_dev.twilio_messaging.models.shared.MessagingV1ServicePhoneNumber](../../models/shared/MessagingV1ServicePhoneNumber.md)> | :heavy_minus_sign:                                                                                                                   | N/A                                                                                                                                  |

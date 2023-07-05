@@ -1,0 +1,9 @@
+# CreatePhoneNumberRequest
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `requestBody`                                                                                                     | [CreatePhoneNumberCreatePhoneNumberRequest](../../models/operations/CreatePhoneNumberCreatePhoneNumberRequest.md) | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |
+| `serviceSid`                                                                                                      | *String*                                                                                                          | :heavy_check_mark:                                                                                                | The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.    |

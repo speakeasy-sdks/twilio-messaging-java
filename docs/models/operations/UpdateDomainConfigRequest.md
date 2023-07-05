@@ -1,0 +1,9 @@
+# UpdateDomainConfigRequest
+
+
+## Fields
+
+| Field                                                                                                                 | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `domainSid`                                                                                                           | *String*                                                                                                              | :heavy_check_mark:                                                                                                    | Unique string used to identify the domain that this config should be associated with.                                 |
+| `requestBody`                                                                                                         | [UpdateDomainConfigUpdateDomainConfigRequest](../../models/operations/UpdateDomainConfigUpdateDomainConfigRequest.md) | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |

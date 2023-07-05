@@ -1,0 +1,10 @@
+# ListServiceRequest
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `page`                                                                                      | *Long*                                                                                      | :heavy_minus_sign:                                                                          | The page index. This value is simply for client state.                                      |
+| `pageSize`                                                                                  | *Long*                                                                                      | :heavy_minus_sign:                                                                          | How many resources to return in each list page. The default is 50, and the maximum is 1000. |
+| `pageToken`                                                                                 | *String*                                                                                    | :heavy_minus_sign:                                                                          | The page token. This is provided by the API.                                                |

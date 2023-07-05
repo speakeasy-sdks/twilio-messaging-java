@@ -1,0 +1,9 @@
+# UpdateDomainCertV4Request
+
+
+## Fields
+
+| Field                                                                                                                 | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `domainSid`                                                                                                           | *String*                                                                                                              | :heavy_check_mark:                                                                                                    | Unique string used to identify the domain that this certificate should be associated with.                            |
+| `requestBody`                                                                                                         | [UpdateDomainCertV4UpdateDomainCertV4Request](../../models/operations/UpdateDomainCertV4UpdateDomainCertV4Request.md) | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |

@@ -1,0 +1,9 @@
+# FetchUsAppToPersonUsecaseRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `brandRegistrationSid`                                                                                             | *String*                                                                                                           | :heavy_minus_sign:                                                                                                 | The unique string to identify the A2P brand.                                                                       |
+| `messagingServiceSid`                                                                                              | *String*                                                                                                           | :heavy_check_mark:                                                                                                 | The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from. |

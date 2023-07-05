@@ -1,0 +1,9 @@
+# DeleteShortCodeRequest
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `serviceSid`                                                                                                  | *String*                                                                                                      | :heavy_check_mark:                                                                                            | The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from. |
+| `sid`                                                                                                         | *String*                                                                                                      | :heavy_check_mark:                                                                                            | The SID of the ShortCode resource to delete.                                                                  |
