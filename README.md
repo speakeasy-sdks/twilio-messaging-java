@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'circl_dev.twilio_messaging:twilio-messaging:1.3.1'
+implementation 'circl_dev.twilio_messaging:twilio-messaging:1.4.0'
 ```
 <!-- End SDK Installation -->
 
