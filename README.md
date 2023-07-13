@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'circl_dev.twilio_messaging:twilio-messaging:1.4.0'
+implementation 'circl_dev.twilio_messaging:twilio-messaging:1.5.0'
 ```
 <!-- End SDK Installation -->
 
@@ -61,6 +61,7 @@ public class Application {
 * [createPhoneNumber](docs/sdks/twiliomessaging/README.md#createphonenumber)
 * [createService](docs/sdks/twiliomessaging/README.md#createservice)
 * [createShortCode](docs/sdks/twiliomessaging/README.md#createshortcode)
+* [createTollfreeVerification](docs/sdks/twiliomessaging/README.md#createtollfreeverification)
 * [createUsAppToPerson](docs/sdks/twiliomessaging/README.md#createusapptoperson)
 * [deleteAlphaSender](docs/sdks/twiliomessaging/README.md#deletealphasender)
 * [deleteDomainCertV4](docs/sdks/twiliomessaging/README.md#deletedomaincertv4)
@@ -80,6 +81,7 @@ public class Application {
 * [fetchPhoneNumber](docs/sdks/twiliomessaging/README.md#fetchphonenumber)
 * [fetchService](docs/sdks/twiliomessaging/README.md#fetchservice)
 * [fetchShortCode](docs/sdks/twiliomessaging/README.md#fetchshortcode)
+* [fetchTollfreeVerification](docs/sdks/twiliomessaging/README.md#fetchtollfreeverification)
 * [fetchUsAppToPerson](docs/sdks/twiliomessaging/README.md#fetchusapptoperson)
 * [fetchUsAppToPersonUsecase](docs/sdks/twiliomessaging/README.md#fetchusapptopersonusecase)
 * [fetchUsecase](docs/sdks/twiliomessaging/README.md#fetchusecase)
@@ -89,11 +91,13 @@ public class Application {
 * [listPhoneNumber](docs/sdks/twiliomessaging/README.md#listphonenumber)
 * [listService](docs/sdks/twiliomessaging/README.md#listservice)
 * [listShortCode](docs/sdks/twiliomessaging/README.md#listshortcode)
+* [listTollfreeVerification](docs/sdks/twiliomessaging/README.md#listtollfreeverification)
 * [listUsAppToPerson](docs/sdks/twiliomessaging/README.md#listusapptoperson)
 * [updateBrandRegistrations](docs/sdks/twiliomessaging/README.md#updatebrandregistrations)
 * [updateDomainCertV4](docs/sdks/twiliomessaging/README.md#updatedomaincertv4)
 * [updateDomainConfig](docs/sdks/twiliomessaging/README.md#updatedomainconfig)
 * [updateService](docs/sdks/twiliomessaging/README.md#updateservice)
+* [updateTollfreeVerification](docs/sdks/twiliomessaging/README.md#updatetollfreeverification)
 <!-- End SDK Available Operations -->
 
 ### Maturity

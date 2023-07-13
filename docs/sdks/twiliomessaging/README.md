@@ -15,6 +15,7 @@ Twilio - Messaging: This is the public Twilio REST API.
 * [createPhoneNumber](#createphonenumber)
 * [createService](#createservice)
 * [createShortCode](#createshortcode)
+* [createTollfreeVerification](#createtollfreeverification)
 * [createUsAppToPerson](#createusapptoperson)
 * [deleteAlphaSender](#deletealphasender)
 * [deleteDomainCertV4](#deletedomaincertv4)
@@ -34,6 +35,7 @@ Twilio - Messaging: This is the public Twilio REST API.
 * [fetchPhoneNumber](#fetchphonenumber)
 * [fetchService](#fetchservice)
 * [fetchShortCode](#fetchshortcode)
+* [fetchTollfreeVerification](#fetchtollfreeverification)
 * [fetchUsAppToPerson](#fetchusapptoperson)
 * [fetchUsAppToPersonUsecase](#fetchusapptopersonusecase)
 * [fetchUsecase](#fetchusecase)
@@ -43,11 +45,13 @@ Twilio - Messaging: This is the public Twilio REST API.
 * [listPhoneNumber](#listphonenumber)
 * [listService](#listservice)
 * [listShortCode](#listshortcode)
+* [listTollfreeVerification](#listtollfreeverification)
 * [listUsAppToPerson](#listusapptoperson)
 * [updateBrandRegistrations](#updatebrandregistrations)
 * [updateDomainCertV4](#updatedomaincertv4)
 * [updateDomainConfig](#updatedomainconfig)
 * [updateService](#updateservice)
+* [updateTollfreeVerification](#updatetollfreeverification)
 
 ## createAlphaSender
 
@@ -528,6 +532,77 @@ public class Application {
 **[circl_dev.twilio_messaging.models.operations.CreateShortCodeResponse](../../models/operations/CreateShortCodeResponse.md)**
 
 
+## createTollfreeVerification
+
+### Example Usage
+
+```java
+package hello.world;
+
+import circl_dev.twilio_messaging.TwilioMessaging;
+import circl_dev.twilio_messaging.models.operations.CreateTollfreeVerificationCreateTollfreeVerificationRequest;
+import circl_dev.twilio_messaging.models.operations.CreateTollfreeVerificationResponse;
+import circl_dev.twilio_messaging.models.operations.CreateTollfreeVerificationSecurity;
+import circl_dev.twilio_messaging.models.shared.TollfreeVerificationEnumOptInType;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            TwilioMessaging sdk = TwilioMessaging.builder()
+                .build();
+
+            CreateTollfreeVerificationCreateTollfreeVerificationRequest req = new CreateTollfreeVerificationCreateTollfreeVerificationRequest("totam", "beatae", "commodi", "molestiae",                 new String[]{{
+                                add("qui"),
+                                add("impedit"),
+                            }}, TollfreeVerificationEnumOptInType.VIA_TEXT, "esse", "ipsum",                 new String[]{{
+                                add("aspernatur"),
+                                add("perferendis"),
+                                add("ad"),
+                            }}, "natus") {{
+                additionalInformation = "sed";
+                businessCity = "iste";
+                businessContactEmail = "dolor";
+                businessContactFirstName = "natus";
+                businessContactLastName = "laboriosam";
+                businessContactPhone = "hic";
+                businessCountry = "saepe";
+                businessPostalCode = "fuga";
+                businessStateProvinceRegion = "in";
+                businessStreetAddress = "corporis";
+                businessStreetAddress2 = "iste";
+                customerProfileSid = "iure";
+                externalReferenceId = "saepe";
+            }};            
+
+            CreateTollfreeVerificationResponse res = sdk.twilioMessaging.createTollfreeVerification(req, new CreateTollfreeVerificationSecurity("quidem", "architecto") {{
+                password = "";
+                username = "";
+            }});
+
+            if (res.messagingV1TollfreeVerification != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                                          | Type                                                                                                                                                                                               | Required                                                                                                                                                                                           | Description                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                                          | [circl_dev.twilio_messaging.models.operations.CreateTollfreeVerificationCreateTollfreeVerificationRequest](../../models/operations/CreateTollfreeVerificationCreateTollfreeVerificationRequest.md) | :heavy_check_mark:                                                                                                                                                                                 | The request object to use for the request.                                                                                                                                                         |
+| `security`                                                                                                                                                                                         | [circl_dev.twilio_messaging.models.operations.CreateTollfreeVerificationSecurity](../../models/operations/CreateTollfreeVerificationSecurity.md)                                                   | :heavy_check_mark:                                                                                                                                                                                 | The security requirements to use for the request.                                                                                                                                                  |
+| `serverURL`                                                                                                                                                                                        | *String*                                                                                                                                                                                           | :heavy_minus_sign:                                                                                                                                                                                 | An optional server URL to use.                                                                                                                                                                     |
+
+
+### Response
+
+**[circl_dev.twilio_messaging.models.operations.CreateTollfreeVerificationResponse](../../models/operations/CreateTollfreeVerificationResponse.md)**
+
+
 ## createUsAppToPerson
 
 ### Example Usage
@@ -547,28 +622,34 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            CreateUsAppToPersonRequest req = new CreateUsAppToPersonRequest("totam") {{
-                requestBody = new CreateUsAppToPersonCreateUsAppToPersonRequest("beatae", "commodi", false, false, "molestiae",                 new String[]{{
-                                    add("qui"),
-                                    add("impedit"),
-                                }}, "cum") {{
+            CreateUsAppToPersonRequest req = new CreateUsAppToPersonRequest("ipsa") {{
+                requestBody = new CreateUsAppToPersonCreateUsAppToPersonRequest("reiciendis", "est", false, false, "mollitia",                 new String[]{{
+                                    add("dolores"),
+                                    add("dolorem"),
+                                    add("corporis"),
+                                }}, "explicabo") {{
                     helpKeywords = new String[]{{
-                        add("ipsum"),
-                        add("excepturi"),
+                        add("enim"),
+                        add("omnis"),
+                        add("nemo"),
+                        add("minima"),
                     }};
-                    helpMessage = "aspernatur";
+                    helpMessage = "excepturi";
                     optInKeywords = new String[]{{
-                        add("ad"),
+                        add("iure"),
                     }};
-                    optInMessage = "natus";
+                    optInMessage = "culpa";
                     optOutKeywords = new String[]{{
-                        add("iste"),
+                        add("sapiente"),
+                        add("architecto"),
+                        add("mollitia"),
+                        add("dolorem"),
                     }};
-                    optOutMessage = "dolor";
+                    optOutMessage = "culpa";
                 }};;
             }};            
 
-            CreateUsAppToPersonResponse res = sdk.twilioMessaging.createUsAppToPerson(req, new CreateUsAppToPersonSecurity("natus", "laboriosam") {{
+            CreateUsAppToPersonResponse res = sdk.twilioMessaging.createUsAppToPerson(req, new CreateUsAppToPersonSecurity("consequuntur", "repellat") {{
                 password = "";
                 username = "";
             }});
@@ -615,9 +696,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            DeleteAlphaSenderRequest req = new DeleteAlphaSenderRequest("hic", "saepe");            
+            DeleteAlphaSenderRequest req = new DeleteAlphaSenderRequest("mollitia", "occaecati");            
 
-            DeleteAlphaSenderResponse res = sdk.twilioMessaging.deleteAlphaSender(req, new DeleteAlphaSenderSecurity("fuga", "in") {{
+            DeleteAlphaSenderResponse res = sdk.twilioMessaging.deleteAlphaSender(req, new DeleteAlphaSenderSecurity("numquam", "commodi") {{
                 password = "";
                 username = "";
             }});
@@ -664,9 +745,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            DeleteDomainCertV4Request req = new DeleteDomainCertV4Request("corporis");            
+            DeleteDomainCertV4Request req = new DeleteDomainCertV4Request("quam");            
 
-            DeleteDomainCertV4Response res = sdk.twilioMessaging.deleteDomainCertV4(req, new DeleteDomainCertV4Security("iste", "iure") {{
+            DeleteDomainCertV4Response res = sdk.twilioMessaging.deleteDomainCertV4(req, new DeleteDomainCertV4Security("molestiae", "velit") {{
                 password = "";
                 username = "";
             }});
@@ -713,9 +794,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            DeleteLinkshorteningMessagingServiceRequest req = new DeleteLinkshorteningMessagingServiceRequest("saepe", "quidem");            
+            DeleteLinkshorteningMessagingServiceRequest req = new DeleteLinkshorteningMessagingServiceRequest("error", "quia");            
 
-            DeleteLinkshorteningMessagingServiceResponse res = sdk.twilioMessaging.deleteLinkshorteningMessagingService(req, new DeleteLinkshorteningMessagingServiceSecurity("architecto", "ipsa") {{
+            DeleteLinkshorteningMessagingServiceResponse res = sdk.twilioMessaging.deleteLinkshorteningMessagingService(req, new DeleteLinkshorteningMessagingServiceSecurity("quis", "vitae") {{
                 password = "";
                 username = "";
             }});
@@ -762,9 +843,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            DeletePhoneNumberRequest req = new DeletePhoneNumberRequest("reiciendis", "est");            
+            DeletePhoneNumberRequest req = new DeletePhoneNumberRequest("laborum", "animi");            
 
-            DeletePhoneNumberResponse res = sdk.twilioMessaging.deletePhoneNumber(req, new DeletePhoneNumberSecurity("mollitia", "laborum") {{
+            DeletePhoneNumberResponse res = sdk.twilioMessaging.deletePhoneNumber(req, new DeletePhoneNumberSecurity("enim", "odit") {{
                 password = "";
                 username = "";
             }});
@@ -811,9 +892,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            DeleteServiceRequest req = new DeleteServiceRequest("dolores");            
+            DeleteServiceRequest req = new DeleteServiceRequest("quo");            
 
-            DeleteServiceResponse res = sdk.twilioMessaging.deleteService(req, new DeleteServiceSecurity("dolorem", "corporis") {{
+            DeleteServiceResponse res = sdk.twilioMessaging.deleteService(req, new DeleteServiceSecurity("sequi", "tenetur") {{
                 password = "";
                 username = "";
             }});
@@ -860,9 +941,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            DeleteShortCodeRequest req = new DeleteShortCodeRequest("explicabo", "nobis");            
+            DeleteShortCodeRequest req = new DeleteShortCodeRequest("ipsam", "id");            
 
-            DeleteShortCodeResponse res = sdk.twilioMessaging.deleteShortCode(req, new DeleteShortCodeSecurity("enim", "omnis") {{
+            DeleteShortCodeResponse res = sdk.twilioMessaging.deleteShortCode(req, new DeleteShortCodeSecurity("possimus", "aut") {{
                 password = "";
                 username = "";
             }});
@@ -909,9 +990,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            DeleteUsAppToPersonRequest req = new DeleteUsAppToPersonRequest("nemo", "minima");            
+            DeleteUsAppToPersonRequest req = new DeleteUsAppToPersonRequest("quasi", "error");            
 
-            DeleteUsAppToPersonResponse res = sdk.twilioMessaging.deleteUsAppToPerson(req, new DeleteUsAppToPersonSecurity("excepturi", "accusantium") {{
+            DeleteUsAppToPersonResponse res = sdk.twilioMessaging.deleteUsAppToPerson(req, new DeleteUsAppToPersonSecurity("temporibus", "laborum") {{
                 password = "";
                 username = "";
             }});
@@ -958,9 +1039,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchAlphaSenderRequest req = new FetchAlphaSenderRequest("iure", "culpa");            
+            FetchAlphaSenderRequest req = new FetchAlphaSenderRequest("quasi", "reiciendis");            
 
-            FetchAlphaSenderResponse res = sdk.twilioMessaging.fetchAlphaSender(req, new FetchAlphaSenderSecurity("doloribus", "sapiente") {{
+            FetchAlphaSenderResponse res = sdk.twilioMessaging.fetchAlphaSender(req, new FetchAlphaSenderSecurity("voluptatibus", "vero") {{
                 password = "";
                 username = "";
             }});
@@ -1007,9 +1088,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchBrandRegistrationsRequest req = new FetchBrandRegistrationsRequest("architecto");            
+            FetchBrandRegistrationsRequest req = new FetchBrandRegistrationsRequest("nihil");            
 
-            FetchBrandRegistrationsResponse res = sdk.twilioMessaging.fetchBrandRegistrations(req, new FetchBrandRegistrationsSecurity("mollitia", "dolorem") {{
+            FetchBrandRegistrationsResponse res = sdk.twilioMessaging.fetchBrandRegistrations(req, new FetchBrandRegistrationsSecurity("praesentium", "voluptatibus") {{
                 password = "";
                 username = "";
             }});
@@ -1056,9 +1137,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchBrandVettingRequest req = new FetchBrandVettingRequest("culpa", "consequuntur");            
+            FetchBrandVettingRequest req = new FetchBrandVettingRequest("ipsa", "omnis");            
 
-            FetchBrandVettingResponse res = sdk.twilioMessaging.fetchBrandVetting(req, new FetchBrandVettingSecurity("repellat", "mollitia") {{
+            FetchBrandVettingResponse res = sdk.twilioMessaging.fetchBrandVetting(req, new FetchBrandVettingSecurity("voluptate", "cum") {{
                 password = "";
                 username = "";
             }});
@@ -1109,10 +1190,10 @@ public class Application {
                 .build();
 
             FetchDeactivationRequest req = new FetchDeactivationRequest() {{
-                date = LocalDate.parse("2022-06-30");
+                date = LocalDate.parse("2022-12-17");
             }};            
 
-            FetchDeactivationResponse res = sdk.twilioMessaging.fetchDeactivation(req, new FetchDeactivationSecurity("commodi", "quam") {{
+            FetchDeactivationResponse res = sdk.twilioMessaging.fetchDeactivation(req, new FetchDeactivationSecurity("reprehenderit", "ut") {{
                 password = "";
                 username = "";
             }});
@@ -1159,9 +1240,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchDomainCertV4Request req = new FetchDomainCertV4Request("molestiae");            
+            FetchDomainCertV4Request req = new FetchDomainCertV4Request("maiores");            
 
-            FetchDomainCertV4Response res = sdk.twilioMessaging.fetchDomainCertV4(req, new FetchDomainCertV4Security("velit", "error") {{
+            FetchDomainCertV4Response res = sdk.twilioMessaging.fetchDomainCertV4(req, new FetchDomainCertV4Security("dicta", "corporis") {{
                 password = "";
                 username = "";
             }});
@@ -1208,9 +1289,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchDomainConfigRequest req = new FetchDomainConfigRequest("quia");            
+            FetchDomainConfigRequest req = new FetchDomainConfigRequest("dolore");            
 
-            FetchDomainConfigResponse res = sdk.twilioMessaging.fetchDomainConfig(req, new FetchDomainConfigSecurity("quis", "vitae") {{
+            FetchDomainConfigResponse res = sdk.twilioMessaging.fetchDomainConfig(req, new FetchDomainConfigSecurity("iusto", "dicta") {{
                 password = "";
                 username = "";
             }});
@@ -1257,9 +1338,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchDomainConfigMessagingServiceRequest req = new FetchDomainConfigMessagingServiceRequest("laborum");            
+            FetchDomainConfigMessagingServiceRequest req = new FetchDomainConfigMessagingServiceRequest("harum");            
 
-            FetchDomainConfigMessagingServiceResponse res = sdk.twilioMessaging.fetchDomainConfigMessagingService(req, new FetchDomainConfigMessagingServiceSecurity("animi", "enim") {{
+            FetchDomainConfigMessagingServiceResponse res = sdk.twilioMessaging.fetchDomainConfigMessagingService(req, new FetchDomainConfigMessagingServiceSecurity("enim", "accusamus") {{
                 password = "";
                 username = "";
             }});
@@ -1306,9 +1387,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchLinkshorteningMessagingServiceDomainAssociationRequest req = new FetchLinkshorteningMessagingServiceDomainAssociationRequest("odit");            
+            FetchLinkshorteningMessagingServiceDomainAssociationRequest req = new FetchLinkshorteningMessagingServiceDomainAssociationRequest("commodi");            
 
-            FetchLinkshorteningMessagingServiceDomainAssociationResponse res = sdk.twilioMessaging.fetchLinkshorteningMessagingServiceDomainAssociation(req, new FetchLinkshorteningMessagingServiceDomainAssociationSecurity("quo", "sequi") {{
+            FetchLinkshorteningMessagingServiceDomainAssociationResponse res = sdk.twilioMessaging.fetchLinkshorteningMessagingServiceDomainAssociation(req, new FetchLinkshorteningMessagingServiceDomainAssociationSecurity("repudiandae", "quae") {{
                 password = "";
                 username = "";
             }});
@@ -1355,9 +1436,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchPhoneNumberRequest req = new FetchPhoneNumberRequest("tenetur", "ipsam");            
+            FetchPhoneNumberRequest req = new FetchPhoneNumberRequest("ipsum", "quidem");            
 
-            FetchPhoneNumberResponse res = sdk.twilioMessaging.fetchPhoneNumber(req, new FetchPhoneNumberSecurity("id", "possimus") {{
+            FetchPhoneNumberResponse res = sdk.twilioMessaging.fetchPhoneNumber(req, new FetchPhoneNumberSecurity("molestias", "excepturi") {{
                 password = "";
                 username = "";
             }});
@@ -1404,9 +1485,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchServiceRequest req = new FetchServiceRequest("aut");            
+            FetchServiceRequest req = new FetchServiceRequest("pariatur");            
 
-            FetchServiceResponse res = sdk.twilioMessaging.fetchService(req, new FetchServiceSecurity("quasi", "error") {{
+            FetchServiceResponse res = sdk.twilioMessaging.fetchService(req, new FetchServiceSecurity("modi", "praesentium") {{
                 password = "";
                 username = "";
             }});
@@ -1453,9 +1534,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchShortCodeRequest req = new FetchShortCodeRequest("temporibus", "laborum");            
+            FetchShortCodeRequest req = new FetchShortCodeRequest("rem", "voluptates");            
 
-            FetchShortCodeResponse res = sdk.twilioMessaging.fetchShortCode(req, new FetchShortCodeSecurity("quasi", "reiciendis") {{
+            FetchShortCodeResponse res = sdk.twilioMessaging.fetchShortCode(req, new FetchShortCodeSecurity("quasi", "repudiandae") {{
                 password = "";
                 username = "";
             }});
@@ -1484,6 +1565,55 @@ public class Application {
 **[circl_dev.twilio_messaging.models.operations.FetchShortCodeResponse](../../models/operations/FetchShortCodeResponse.md)**
 
 
+## fetchTollfreeVerification
+
+### Example Usage
+
+```java
+package hello.world;
+
+import circl_dev.twilio_messaging.TwilioMessaging;
+import circl_dev.twilio_messaging.models.operations.FetchTollfreeVerificationRequest;
+import circl_dev.twilio_messaging.models.operations.FetchTollfreeVerificationResponse;
+import circl_dev.twilio_messaging.models.operations.FetchTollfreeVerificationSecurity;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            TwilioMessaging sdk = TwilioMessaging.builder()
+                .build();
+
+            FetchTollfreeVerificationRequest req = new FetchTollfreeVerificationRequest("sint");            
+
+            FetchTollfreeVerificationResponse res = sdk.twilioMessaging.fetchTollfreeVerification(req, new FetchTollfreeVerificationSecurity("veritatis", "itaque") {{
+                password = "";
+                username = "";
+            }});
+
+            if (res.messagingV1TollfreeVerification != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [circl_dev.twilio_messaging.models.operations.FetchTollfreeVerificationRequest](../../models/operations/FetchTollfreeVerificationRequest.md)   | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `security`                                                                                                                                     | [circl_dev.twilio_messaging.models.operations.FetchTollfreeVerificationSecurity](../../models/operations/FetchTollfreeVerificationSecurity.md) | :heavy_check_mark:                                                                                                                             | The security requirements to use for the request.                                                                                              |
+| `serverURL`                                                                                                                                    | *String*                                                                                                                                       | :heavy_minus_sign:                                                                                                                             | An optional server URL to use.                                                                                                                 |
+
+
+### Response
+
+**[circl_dev.twilio_messaging.models.operations.FetchTollfreeVerificationResponse](../../models/operations/FetchTollfreeVerificationResponse.md)**
+
+
 ## fetchUsAppToPerson
 
 ### Example Usage
@@ -1502,9 +1632,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchUsAppToPersonRequest req = new FetchUsAppToPersonRequest("voluptatibus", "vero");            
+            FetchUsAppToPersonRequest req = new FetchUsAppToPersonRequest("incidunt", "enim");            
 
-            FetchUsAppToPersonResponse res = sdk.twilioMessaging.fetchUsAppToPerson(req, new FetchUsAppToPersonSecurity("nihil", "praesentium") {{
+            FetchUsAppToPersonResponse res = sdk.twilioMessaging.fetchUsAppToPerson(req, new FetchUsAppToPersonSecurity("consequatur", "est") {{
                 password = "";
                 username = "";
             }});
@@ -1551,11 +1681,11 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchUsAppToPersonUsecaseRequest req = new FetchUsAppToPersonUsecaseRequest("voluptatibus") {{
-                brandRegistrationSid = "ipsa";
+            FetchUsAppToPersonUsecaseRequest req = new FetchUsAppToPersonUsecaseRequest("quibusdam") {{
+                brandRegistrationSid = "explicabo";
             }};            
 
-            FetchUsAppToPersonUsecaseResponse res = sdk.twilioMessaging.fetchUsAppToPersonUsecase(req, new FetchUsAppToPersonUsecaseSecurity("omnis", "voluptate") {{
+            FetchUsAppToPersonUsecaseResponse res = sdk.twilioMessaging.fetchUsAppToPersonUsecase(req, new FetchUsAppToPersonUsecaseSecurity("deserunt", "distinctio") {{
                 password = "";
                 username = "";
             }});
@@ -1601,7 +1731,7 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            FetchUsecaseResponse res = sdk.twilioMessaging.fetchUsecase(new FetchUsecaseSecurity("cum", "perferendis") {{
+            FetchUsecaseResponse res = sdk.twilioMessaging.fetchUsecase(new FetchUsecaseSecurity("quibusdam", "labore") {{
                 password = "";
                 username = "";
             }});
@@ -1647,13 +1777,13 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            ListAlphaSenderRequest req = new ListAlphaSenderRequest("doloremque") {{
-                page = 441711L;
-                pageSize = 282807L;
-                pageToken = "maiores";
+            ListAlphaSenderRequest req = new ListAlphaSenderRequest("modi") {{
+                page = 183191L;
+                pageSize = 397821L;
+                pageToken = "cupiditate";
             }};            
 
-            ListAlphaSenderResponse res = sdk.twilioMessaging.listAlphaSender(req, new ListAlphaSenderSecurity("dicta", "corporis") {{
+            ListAlphaSenderResponse res = sdk.twilioMessaging.listAlphaSender(req, new ListAlphaSenderSecurity("quos", "perferendis") {{
                 password = "";
                 username = "";
             }});
@@ -1701,12 +1831,12 @@ public class Application {
                 .build();
 
             ListBrandRegistrationsRequest req = new ListBrandRegistrationsRequest() {{
-                page = 296140L;
-                pageSize = 480894L;
-                pageToken = "dicta";
+                page = 164940L;
+                pageSize = 828940L;
+                pageToken = "ipsam";
             }};            
 
-            ListBrandRegistrationsResponse res = sdk.twilioMessaging.listBrandRegistrations(req, new ListBrandRegistrationsSecurity("harum", "enim") {{
+            ListBrandRegistrationsResponse res = sdk.twilioMessaging.listBrandRegistrations(req, new ListBrandRegistrationsSecurity("alias", "fugit") {{
                 password = "";
                 username = "";
             }});
@@ -1754,14 +1884,14 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            ListBrandVettingRequest req = new ListBrandVettingRequest("accusamus") {{
-                page = 414263L;
-                pageSize = 918236L;
-                pageToken = "quae";
+            ListBrandVettingRequest req = new ListBrandVettingRequest("dolorum") {{
+                page = 569618L;
+                pageSize = 270008L;
+                pageToken = "facilis";
                 vettingProvider = BrandVettingEnumVettingProvider.CAMPAIGN_VERIFY;
             }};            
 
-            ListBrandVettingResponse res = sdk.twilioMessaging.listBrandVetting(req, new ListBrandVettingSecurity("ipsum", "quidem") {{
+            ListBrandVettingResponse res = sdk.twilioMessaging.listBrandVetting(req, new ListBrandVettingSecurity("tempore", "labore") {{
                 password = "";
                 username = "";
             }});
@@ -1808,13 +1938,13 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            ListPhoneNumberRequest req = new ListPhoneNumberRequest("molestias") {{
-                page = 566602L;
-                pageSize = 865103L;
-                pageToken = "modi";
+            ListPhoneNumberRequest req = new ListPhoneNumberRequest("delectus") {{
+                page = 433288L;
+                pageSize = 248753L;
+                pageToken = "eligendi";
             }};            
 
-            ListPhoneNumberResponse res = sdk.twilioMessaging.listPhoneNumber(req, new ListPhoneNumberSecurity("praesentium", "rem") {{
+            ListPhoneNumberResponse res = sdk.twilioMessaging.listPhoneNumber(req, new ListPhoneNumberSecurity("sint", "aliquid") {{
                 password = "";
                 username = "";
             }});
@@ -1862,12 +1992,12 @@ public class Application {
                 .build();
 
             ListServiceRequest req = new ListServiceRequest() {{
-                page = 916723L;
-                pageSize = 93940L;
-                pageToken = "repudiandae";
+                page = 592042L;
+                pageSize = 896039L;
+                pageToken = "sint";
             }};            
 
-            ListServiceResponse res = sdk.twilioMessaging.listService(req, new ListServiceSecurity("sint", "veritatis") {{
+            ListServiceResponse res = sdk.twilioMessaging.listService(req, new ListServiceSecurity("officia", "dolor") {{
                 password = "";
                 username = "";
             }});
@@ -1914,13 +2044,13 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            ListShortCodeRequest req = new ListShortCodeRequest("itaque") {{
-                page = 277718L;
-                pageSize = 318569L;
-                pageToken = "consequatur";
+            ListShortCodeRequest req = new ListShortCodeRequest("debitis") {{
+                page = 952749L;
+                pageSize = 680056L;
+                pageToken = "in";
             }};            
 
-            ListShortCodeResponse res = sdk.twilioMessaging.listShortCode(req, new ListShortCodeSecurity("est", "quibusdam") {{
+            ListShortCodeResponse res = sdk.twilioMessaging.listShortCode(req, new ListShortCodeSecurity("in", "illum") {{
                 password = "";
                 username = "";
             }});
@@ -1949,6 +2079,62 @@ public class Application {
 **[circl_dev.twilio_messaging.models.operations.ListShortCodeResponse](../../models/operations/ListShortCodeResponse.md)**
 
 
+## listTollfreeVerification
+
+### Example Usage
+
+```java
+package hello.world;
+
+import circl_dev.twilio_messaging.TwilioMessaging;
+import circl_dev.twilio_messaging.models.operations.ListTollfreeVerificationRequest;
+import circl_dev.twilio_messaging.models.operations.ListTollfreeVerificationResponse;
+import circl_dev.twilio_messaging.models.operations.ListTollfreeVerificationSecurity;
+import circl_dev.twilio_messaging.models.shared.TollfreeVerificationEnumStatus;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            TwilioMessaging sdk = TwilioMessaging.builder()
+                .build();
+
+            ListTollfreeVerificationRequest req = new ListTollfreeVerificationRequest() {{
+                page = 978571L;
+                pageSize = 699479L;
+                pageToken = "dicta";
+                status = TollfreeVerificationEnumStatus.IN_REVIEW;
+                tollfreePhoneNumberSid = "cumque";
+            }};            
+
+            ListTollfreeVerificationResponse res = sdk.twilioMessaging.listTollfreeVerification(req, new ListTollfreeVerificationSecurity("facere", "ea") {{
+                password = "";
+                username = "";
+            }});
+
+            if (res.listTollfreeVerificationResponse != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [circl_dev.twilio_messaging.models.operations.ListTollfreeVerificationRequest](../../models/operations/ListTollfreeVerificationRequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `security`                                                                                                                                   | [circl_dev.twilio_messaging.models.operations.ListTollfreeVerificationSecurity](../../models/operations/ListTollfreeVerificationSecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
+| `serverURL`                                                                                                                                  | *String*                                                                                                                                     | :heavy_minus_sign:                                                                                                                           | An optional server URL to use.                                                                                                               |
+
+
+### Response
+
+**[circl_dev.twilio_messaging.models.operations.ListTollfreeVerificationResponse](../../models/operations/ListTollfreeVerificationResponse.md)**
+
+
 ## listUsAppToPerson
 
 ### Example Usage
@@ -1967,13 +2153,13 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            ListUsAppToPersonRequest req = new ListUsAppToPersonRequest("explicabo") {{
-                page = 647174L;
-                pageSize = 716327L;
-                pageToken = "quibusdam";
+            ListUsAppToPersonRequest req = new ListUsAppToPersonRequest("aliquid") {{
+                page = 675439L;
+                pageSize = 881104L;
+                pageToken = "non";
             }};            
 
-            ListUsAppToPersonResponse res = sdk.twilioMessaging.listUsAppToPerson(req, new ListUsAppToPersonSecurity("labore", "modi") {{
+            ListUsAppToPersonResponse res = sdk.twilioMessaging.listUsAppToPerson(req, new ListUsAppToPersonSecurity("occaecati", "enim") {{
                 password = "";
                 username = "";
             }});
@@ -2020,9 +2206,9 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            UpdateBrandRegistrationsRequest req = new UpdateBrandRegistrationsRequest("qui");            
+            UpdateBrandRegistrationsRequest req = new UpdateBrandRegistrationsRequest("accusamus");            
 
-            UpdateBrandRegistrationsResponse res = sdk.twilioMessaging.updateBrandRegistrations(req, new UpdateBrandRegistrationsSecurity("aliquid", "cupiditate") {{
+            UpdateBrandRegistrationsResponse res = sdk.twilioMessaging.updateBrandRegistrations(req, new UpdateBrandRegistrationsSecurity("delectus", "quidem") {{
                 password = "";
                 username = "";
             }});
@@ -2070,11 +2256,11 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            UpdateDomainCertV4Request req = new UpdateDomainCertV4Request("quos") {{
-                requestBody = new UpdateDomainCertV4UpdateDomainCertV4Request("perferendis");;
+            UpdateDomainCertV4Request req = new UpdateDomainCertV4Request("provident") {{
+                requestBody = new UpdateDomainCertV4UpdateDomainCertV4Request("nam");;
             }};            
 
-            UpdateDomainCertV4Response res = sdk.twilioMessaging.updateDomainCertV4(req, new UpdateDomainCertV4Security("magni", "assumenda") {{
+            UpdateDomainCertV4Response res = sdk.twilioMessaging.updateDomainCertV4(req, new UpdateDomainCertV4Security("id", "blanditiis") {{
                 password = "";
                 username = "";
             }});
@@ -2122,16 +2308,16 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            UpdateDomainConfigRequest req = new UpdateDomainConfigRequest("ipsam") {{
+            UpdateDomainConfigRequest req = new UpdateDomainConfigRequest("deleniti") {{
                 requestBody = new UpdateDomainConfigUpdateDomainConfigRequest() {{
-                    callbackUrl = "http://costly-poncho.name";
+                    callbackUrl = "https://embarrassed-peacock.info";
                     continueOnFailure = false;
                     disableHttps = false;
-                    fallbackUrl = "http://rotating-relationship.biz";
+                    fallbackUrl = "http://personal-occurrence.info";
                 }};;
             }};            
 
-            UpdateDomainConfigResponse res = sdk.twilioMessaging.updateDomainConfig(req, new UpdateDomainConfigSecurity("delectus", "eum") {{
+            UpdateDomainConfigResponse res = sdk.twilioMessaging.updateDomainConfig(req, new UpdateDomainConfigSecurity("perferendis", "nihil") {{
                 password = "";
                 username = "";
             }});
@@ -2182,28 +2368,28 @@ public class Application {
             TwilioMessaging sdk = TwilioMessaging.builder()
                 .build();
 
-            UpdateServiceRequest req = new UpdateServiceRequest("non") {{
+            UpdateServiceRequest req = new UpdateServiceRequest("magnam") {{
                 requestBody = new UpdateServiceUpdateServiceRequest1() {{
                     areaCodeGeomatch = false;
                     fallbackMethod = UpdateServiceUpdateServiceRequestFallbackMethod.PUT;
                     fallbackToLongCode = false;
-                    fallbackUrl = "https://humming-networking.org";
-                    friendlyName = "sint";
-                    inboundMethod = UpdateServiceUpdateServiceRequestInboundMethod.PATCH;
-                    inboundRequestUrl = "http://unimportant-venture.net";
+                    fallbackUrl = "https://flamboyant-dwarf.info";
+                    friendlyName = "natus";
+                    inboundMethod = UpdateServiceUpdateServiceRequestInboundMethod.PUT;
+                    inboundRequestUrl = "http://ugly-cash.com";
                     mmsConverter = false;
-                    scanMessageContent = ServiceEnumScanMessageContent.ENABLE;
+                    scanMessageContent = ServiceEnumScanMessageContent.INHERIT;
                     smartEncoding = false;
-                    statusCallback = "http://thankful-wheat.net";
+                    statusCallback = "http://nippy-flour.name";
                     stickySender = false;
                     synchronousValidation = false;
                     useInboundWebhookOnNumber = false;
-                    usecase = "dicta";
-                    validityPeriod = 297437L;
+                    usecase = "quos";
+                    validityPeriod = 574325L;
                 }};;
             }};            
 
-            UpdateServiceResponse res = sdk.twilioMessaging.updateService(req, new UpdateServiceSecurity("cumque", "facere") {{
+            UpdateServiceResponse res = sdk.twilioMessaging.updateService(req, new UpdateServiceSecurity("accusantium", "mollitia") {{
                 password = "";
                 username = "";
             }});
@@ -2230,4 +2416,85 @@ public class Application {
 ### Response
 
 **[circl_dev.twilio_messaging.models.operations.UpdateServiceResponse](../../models/operations/UpdateServiceResponse.md)**
+
+
+## updateTollfreeVerification
+
+### Example Usage
+
+```java
+package hello.world;
+
+import circl_dev.twilio_messaging.TwilioMessaging;
+import circl_dev.twilio_messaging.models.operations.UpdateTollfreeVerificationRequest;
+import circl_dev.twilio_messaging.models.operations.UpdateTollfreeVerificationResponse;
+import circl_dev.twilio_messaging.models.operations.UpdateTollfreeVerificationSecurity;
+import circl_dev.twilio_messaging.models.operations.UpdateTollfreeVerificationUpdateTollfreeVerificationRequest;
+import circl_dev.twilio_messaging.models.shared.TollfreeVerificationEnumOptInType;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            TwilioMessaging sdk = TwilioMessaging.builder()
+                .build();
+
+            UpdateTollfreeVerificationRequest req = new UpdateTollfreeVerificationRequest("reiciendis") {{
+                requestBody = new UpdateTollfreeVerificationUpdateTollfreeVerificationRequest() {{
+                    additionalInformation = "mollitia";
+                    businessCity = "ad";
+                    businessContactEmail = "eum";
+                    businessContactFirstName = "dolor";
+                    businessContactLastName = "necessitatibus";
+                    businessContactPhone = "odit";
+                    businessCountry = "nemo";
+                    businessName = "quasi";
+                    businessPostalCode = "iure";
+                    businessStateProvinceRegion = "doloribus";
+                    businessStreetAddress = "debitis";
+                    businessStreetAddress2 = "eius";
+                    businessWebsite = "maxime";
+                    messageVolume = "deleniti";
+                    notificationEmail = "facilis";
+                    optInImageUrls = new String[]{{
+                        add("architecto"),
+                        add("architecto"),
+                    }};
+                    optInType = TollfreeVerificationEnumOptInType.MOBILE_QR_CODE;
+                    productionMessageSample = "ullam";
+                    useCaseCategories = new String[]{{
+                        add("nihil"),
+                        add("repellat"),
+                        add("quibusdam"),
+                    }};
+                    useCaseSummary = "sed";
+                }};;
+            }};            
+
+            UpdateTollfreeVerificationResponse res = sdk.twilioMessaging.updateTollfreeVerification(req, new UpdateTollfreeVerificationSecurity("saepe", "pariatur") {{
+                password = "";
+                username = "";
+            }});
+
+            if (res.messagingV1TollfreeVerification != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [circl_dev.twilio_messaging.models.operations.UpdateTollfreeVerificationRequest](../../models/operations/UpdateTollfreeVerificationRequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `security`                                                                                                                                       | [circl_dev.twilio_messaging.models.operations.UpdateTollfreeVerificationSecurity](../../models/operations/UpdateTollfreeVerificationSecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| `serverURL`                                                                                                                                      | *String*                                                                                                                                         | :heavy_minus_sign:                                                                                                                               | An optional server URL to use.                                                                                                                   |
+
+
+### Response
+
+**[circl_dev.twilio_messaging.models.operations.UpdateTollfreeVerificationResponse](../../models/operations/UpdateTollfreeVerificationResponse.md)**
 

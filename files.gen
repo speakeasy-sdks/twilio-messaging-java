@@ -62,6 +62,9 @@ lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateShortCodeSe
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateShortCodeCreateShortCodeRequest.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateShortCodeRequest.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateShortCodeResponse.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateTollfreeVerificationSecurity.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateTollfreeVerificationCreateTollfreeVerificationRequest.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateTollfreeVerificationResponse.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateUsAppToPersonSecurity.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateUsAppToPersonCreateUsAppToPersonRequest.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/CreateUsAppToPersonRequest.java
@@ -120,6 +123,9 @@ lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchServiceRespo
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchShortCodeSecurity.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchShortCodeRequest.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchShortCodeResponse.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchTollfreeVerificationSecurity.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchTollfreeVerificationRequest.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchTollfreeVerificationResponse.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchUsAppToPersonSecurity.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchUsAppToPersonRequest.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/FetchUsAppToPersonResponse.java
@@ -158,6 +164,11 @@ lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListShortCodeRequ
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListShortCodeListShortCodeResponseMeta.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListShortCodeListShortCodeResponse.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListShortCodeResponse.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListTollfreeVerificationSecurity.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListTollfreeVerificationRequest.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListTollfreeVerificationListTollfreeVerificationResponseMeta.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListTollfreeVerificationListTollfreeVerificationResponse.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListTollfreeVerificationResponse.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListUsAppToPersonSecurity.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListUsAppToPersonRequest.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/ListUsAppToPersonListUsAppToPersonResponseMeta.java
@@ -180,6 +191,10 @@ lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateServiceUpda
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateServiceUpdateServiceRequest1.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateServiceRequest.java
 lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateServiceResponse.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateTollfreeVerificationSecurity.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateTollfreeVerificationUpdateTollfreeVerificationRequest.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateTollfreeVerificationRequest.java
+lib/src/main/java/circl_dev/twilio_messaging/models/operations/UpdateTollfreeVerificationResponse.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1ServiceAlphaSender.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1BrandRegistrationsBrandRegistrationOtp.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1BrandRegistrationsLinks.java
@@ -198,6 +213,9 @@ lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1ServiceLin
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1Service.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/ServiceEnumScanMessageContent.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1ServiceShortCode.java
+lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1TollfreeVerification.java
+lib/src/main/java/circl_dev/twilio_messaging/models/shared/TollfreeVerificationEnumStatus.java
+lib/src/main/java/circl_dev/twilio_messaging/models/shared/TollfreeVerificationEnumOptInType.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1ServiceUsAppToPerson.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1Deactivation.java
 lib/src/main/java/circl_dev/twilio_messaging/models/shared/MessagingV1DomainCertV4.java
@@ -241,6 +259,9 @@ docs/models/operations/CreateShortCodeSecurity.md
 docs/models/operations/CreateShortCodeCreateShortCodeRequest.md
 docs/models/operations/CreateShortCodeRequest.md
 docs/models/operations/CreateShortCodeResponse.md
+docs/models/operations/CreateTollfreeVerificationSecurity.md
+docs/models/operations/CreateTollfreeVerificationCreateTollfreeVerificationRequest.md
+docs/models/operations/CreateTollfreeVerificationResponse.md
 docs/models/operations/CreateUsAppToPersonSecurity.md
 docs/models/operations/CreateUsAppToPersonCreateUsAppToPersonRequest.md
 docs/models/operations/CreateUsAppToPersonRequest.md
@@ -299,6 +320,9 @@ docs/models/operations/FetchServiceResponse.md
 docs/models/operations/FetchShortCodeSecurity.md
 docs/models/operations/FetchShortCodeRequest.md
 docs/models/operations/FetchShortCodeResponse.md
+docs/models/operations/FetchTollfreeVerificationSecurity.md
+docs/models/operations/FetchTollfreeVerificationRequest.md
+docs/models/operations/FetchTollfreeVerificationResponse.md
 docs/models/operations/FetchUsAppToPersonSecurity.md
 docs/models/operations/FetchUsAppToPersonRequest.md
 docs/models/operations/FetchUsAppToPersonResponse.md
@@ -337,6 +361,11 @@ docs/models/operations/ListShortCodeRequest.md
 docs/models/operations/ListShortCodeListShortCodeResponseMeta.md
 docs/models/operations/ListShortCodeListShortCodeResponse.md
 docs/models/operations/ListShortCodeResponse.md
+docs/models/operations/ListTollfreeVerificationSecurity.md
+docs/models/operations/ListTollfreeVerificationRequest.md
+docs/models/operations/ListTollfreeVerificationListTollfreeVerificationResponseMeta.md
+docs/models/operations/ListTollfreeVerificationListTollfreeVerificationResponse.md
+docs/models/operations/ListTollfreeVerificationResponse.md
 docs/models/operations/ListUsAppToPersonSecurity.md
 docs/models/operations/ListUsAppToPersonRequest.md
 docs/models/operations/ListUsAppToPersonListUsAppToPersonResponseMeta.md
@@ -359,6 +388,10 @@ docs/models/operations/UpdateServiceUpdateServiceRequestInboundMethod.md
 docs/models/operations/UpdateServiceUpdateServiceRequest1.md
 docs/models/operations/UpdateServiceRequest.md
 docs/models/operations/UpdateServiceResponse.md
+docs/models/operations/UpdateTollfreeVerificationSecurity.md
+docs/models/operations/UpdateTollfreeVerificationUpdateTollfreeVerificationRequest.md
+docs/models/operations/UpdateTollfreeVerificationRequest.md
+docs/models/operations/UpdateTollfreeVerificationResponse.md
 docs/models/shared/MessagingV1ServiceAlphaSender.md
 docs/models/shared/MessagingV1BrandRegistrationsBrandRegistrationOtp.md
 docs/models/shared/MessagingV1BrandRegistrationsLinks.md
@@ -377,6 +410,9 @@ docs/models/shared/MessagingV1ServiceLinks.md
 docs/models/shared/MessagingV1Service.md
 docs/models/shared/ServiceEnumScanMessageContent.md
 docs/models/shared/MessagingV1ServiceShortCode.md
+docs/models/shared/MessagingV1TollfreeVerification.md
+docs/models/shared/TollfreeVerificationEnumStatus.md
+docs/models/shared/TollfreeVerificationEnumOptInType.md
 docs/models/shared/MessagingV1ServiceUsAppToPerson.md
 docs/models/shared/MessagingV1Deactivation.md
 docs/models/shared/MessagingV1DomainCertV4.md
