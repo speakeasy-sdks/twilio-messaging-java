@@ -1,7 +1,7 @@
 configVersion: 1.0.0
 management:
-  docChecksum: ffa1c72b84a5c3c42c965404b702fea7
-  docVersion: 1.46.0
+  docChecksum: 8f4a701d9f59febc349cf38561600265
+  docVersion: 1.46.1
   speakeasyVersion: 1.65.1
   generationVersion: 2.73.1
 generation:
@@ -13,7 +13,7 @@ generation:
   singleTagPerOp: false
   tagNamespacingDisabled: false
 java:
-  version: 1.10.1
+  version: 1.10.2
   artifactID: twilio-messaging
   companyEmail: info@mycompany.com
   companyName: My Company
