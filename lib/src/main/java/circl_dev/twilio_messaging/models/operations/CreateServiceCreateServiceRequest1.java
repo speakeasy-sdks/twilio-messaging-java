@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateServiceCreateServiceRequest1 {
     /**
-     * Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/sms/services#area-code-geomatch) on the Service Instance.
+     * Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/messaging/services#area-code-geomatch) on the Service Instance.
      */
     @SpeakeasyMetadata("form:name=AreaCodeGeomatch")
     public Boolean areaCodeGeomatch;
@@ -32,7 +32,7 @@ public class CreateServiceCreateServiceRequest1 {
     }
     
     /**
-     * Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/sms/services#fallback-to-long-code) for messages sent through the Service instance.
+     * Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/messaging/services#fallback-to-long-code) for messages sent through the Service instance.
      */
     @SpeakeasyMetadata("form:name=FallbackToLongCode")
     public Boolean fallbackToLongCode;
@@ -87,7 +87,7 @@ public class CreateServiceCreateServiceRequest1 {
     }
     
     /**
-     * Whether to enable the [MMS Converter](https://www.twilio.com/docs/sms/services#mms-converter) for messages sent through the Service instance.
+     * Whether to enable the [MMS Converter](https://www.twilio.com/docs/messaging/services#mms-converter) for messages sent through the Service instance.
      */
     @SpeakeasyMetadata("form:name=MmsConverter")
     public Boolean mmsConverter;
@@ -106,7 +106,7 @@ public class CreateServiceCreateServiceRequest1 {
     }
     
     /**
-     * Whether to enable [Smart Encoding](https://www.twilio.com/docs/sms/services#smart-encoding) for messages sent through the Service instance.
+     * Whether to enable [Smart Encoding](https://www.twilio.com/docs/messaging/services#smart-encoding) for messages sent through the Service instance.
      */
     @SpeakeasyMetadata("form:name=SmartEncoding")
     public Boolean smartEncoding;
@@ -128,7 +128,7 @@ public class CreateServiceCreateServiceRequest1 {
     }
     
     /**
-     * Whether to enable [Sticky Sender](https://www.twilio.com/docs/sms/services#sticky-sender) on the Service instance.
+     * Whether to enable [Sticky Sender](https://www.twilio.com/docs/messaging/services#sticky-sender) on the Service instance.
      */
     @SpeakeasyMetadata("form:name=StickySender")
     public Boolean stickySender;

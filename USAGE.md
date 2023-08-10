@@ -20,7 +20,7 @@ public class Application {
                 requestBody = new CreateAlphaSenderCreateAlphaSenderRequest("provident");;
             }};            
 
-            CreateAlphaSenderResponse res = sdk.createAlphaSender(req, new CreateAlphaSenderSecurity("distinctio", "quibusdam") {{
+            CreateAlphaSenderResponse res = sdk.messagingV1AlphaSender.createAlphaSender(req, new CreateAlphaSenderSecurity("distinctio", "quibusdam") {{
                 password = "";
                 username = "";
             }});

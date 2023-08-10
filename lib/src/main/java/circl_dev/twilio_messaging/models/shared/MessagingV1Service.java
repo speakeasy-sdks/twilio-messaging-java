@@ -31,7 +31,7 @@ public class MessagingV1Service {
     }
     
     /**
-     * Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/sms/services#area-code-geomatch) on the Service Instance.
+     * Whether to enable [Area Code Geomatch](https://www.twilio.com/docs/messaging/services#area-code-geomatch) on the Service Instance.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("area_code_geomatch")
@@ -83,7 +83,7 @@ public class MessagingV1Service {
     }
     
     /**
-     * Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/sms/services#fallback-to-long-code) for messages sent through the Service instance.
+     * Whether to enable [Fallback to Long Code](https://www.twilio.com/docs/messaging/services#fallback-to-long-code) for messages sent through the Service instance.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fallback_to_long_code")
@@ -155,7 +155,7 @@ public class MessagingV1Service {
     }
     
     /**
-     * Whether to enable the [MMS Converter](https://www.twilio.com/docs/sms/services#mms-converter) for messages sent through the Service instance.
+     * Whether to enable the [MMS Converter](https://www.twilio.com/docs/messaging/services#mms-converter) for messages sent through the Service instance.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mms_converter")
@@ -188,7 +188,7 @@ public class MessagingV1Service {
     }
     
     /**
-     * Whether to enable [Smart Encoding](https://www.twilio.com/docs/sms/services#smart-encoding) for messages sent through the Service instance.
+     * Whether to enable [Smart Encoding](https://www.twilio.com/docs/messaging/services#smart-encoding) for messages sent through the Service instance.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smart_encoding")
@@ -212,7 +212,7 @@ public class MessagingV1Service {
     }
     
     /**
-     * Whether to enable [Sticky Sender](https://www.twilio.com/docs/sms/services#sticky-sender) on the Service instance.
+     * Whether to enable [Sticky Sender](https://www.twilio.com/docs/messaging/services#sticky-sender) on the Service instance.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sticky_sender")

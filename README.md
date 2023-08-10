@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'circl_dev.twilio_messaging:twilio-messaging:1.14.0'
+implementation 'circl_dev.twilio_messaging:twilio-messaging:1.15.0'
 ```
 <!-- End SDK Installation -->
 
@@ -33,7 +33,7 @@ public class Application {
                 requestBody = new CreateAlphaSenderCreateAlphaSenderRequest("provident");;
             }};            
 
-            CreateAlphaSenderResponse res = sdk.createAlphaSender(req, new CreateAlphaSenderSecurity("distinctio", "quibusdam") {{
+            CreateAlphaSenderResponse res = sdk.messagingV1AlphaSender.createAlphaSender(req, new CreateAlphaSenderSecurity("distinctio", "quibusdam") {{
                 password = "";
                 username = "";
             }});
@@ -52,54 +52,106 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### [TwilioMessaging SDK](docs/sdks/twiliomessaging/README.md)
 
-* [createAlphaSender](docs/sdks/twiliomessaging/README.md#createalphasender)
-* [createBrandRegistrationOtp](docs/sdks/twiliomessaging/README.md#createbrandregistrationotp)
-* [createBrandRegistrations](docs/sdks/twiliomessaging/README.md#createbrandregistrations)
-* [createBrandVetting](docs/sdks/twiliomessaging/README.md#createbrandvetting)
-* [createExternalCampaign](docs/sdks/twiliomessaging/README.md#createexternalcampaign)
-* [createLinkshorteningMessagingService](docs/sdks/twiliomessaging/README.md#createlinkshorteningmessagingservice)
-* [createPhoneNumber](docs/sdks/twiliomessaging/README.md#createphonenumber)
-* [createService](docs/sdks/twiliomessaging/README.md#createservice)
-* [createShortCode](docs/sdks/twiliomessaging/README.md#createshortcode)
-* [createTollfreeVerification](docs/sdks/twiliomessaging/README.md#createtollfreeverification)
-* [createUsAppToPerson](docs/sdks/twiliomessaging/README.md#createusapptoperson)
-* [deleteAlphaSender](docs/sdks/twiliomessaging/README.md#deletealphasender)
-* [deleteDomainCertV4](docs/sdks/twiliomessaging/README.md#deletedomaincertv4)
-* [deleteLinkshorteningMessagingService](docs/sdks/twiliomessaging/README.md#deletelinkshorteningmessagingservice)
-* [deletePhoneNumber](docs/sdks/twiliomessaging/README.md#deletephonenumber)
-* [deleteService](docs/sdks/twiliomessaging/README.md#deleteservice)
-* [deleteShortCode](docs/sdks/twiliomessaging/README.md#deleteshortcode)
-* [deleteUsAppToPerson](docs/sdks/twiliomessaging/README.md#deleteusapptoperson)
-* [fetchAlphaSender](docs/sdks/twiliomessaging/README.md#fetchalphasender)
-* [fetchBrandRegistrations](docs/sdks/twiliomessaging/README.md#fetchbrandregistrations)
-* [fetchBrandVetting](docs/sdks/twiliomessaging/README.md#fetchbrandvetting)
-* [fetchDeactivation](docs/sdks/twiliomessaging/README.md#fetchdeactivation) - Fetch a list of all United States numbers that have been deactivated on a specific date.
-* [fetchDomainCertV4](docs/sdks/twiliomessaging/README.md#fetchdomaincertv4)
-* [fetchDomainConfig](docs/sdks/twiliomessaging/README.md#fetchdomainconfig)
-* [fetchDomainConfigMessagingService](docs/sdks/twiliomessaging/README.md#fetchdomainconfigmessagingservice)
-* [fetchLinkshorteningMessagingServiceDomainAssociation](docs/sdks/twiliomessaging/README.md#fetchlinkshorteningmessagingservicedomainassociation)
-* [fetchPhoneNumber](docs/sdks/twiliomessaging/README.md#fetchphonenumber)
-* [fetchService](docs/sdks/twiliomessaging/README.md#fetchservice)
-* [fetchShortCode](docs/sdks/twiliomessaging/README.md#fetchshortcode)
-* [fetchTollfreeVerification](docs/sdks/twiliomessaging/README.md#fetchtollfreeverification)
-* [fetchUsAppToPerson](docs/sdks/twiliomessaging/README.md#fetchusapptoperson)
-* [fetchUsAppToPersonUsecase](docs/sdks/twiliomessaging/README.md#fetchusapptopersonusecase)
-* [fetchUsecase](docs/sdks/twiliomessaging/README.md#fetchusecase)
-* [listAlphaSender](docs/sdks/twiliomessaging/README.md#listalphasender)
-* [listBrandRegistrations](docs/sdks/twiliomessaging/README.md#listbrandregistrations)
-* [listBrandVetting](docs/sdks/twiliomessaging/README.md#listbrandvetting)
-* [listPhoneNumber](docs/sdks/twiliomessaging/README.md#listphonenumber)
-* [listService](docs/sdks/twiliomessaging/README.md#listservice)
-* [listShortCode](docs/sdks/twiliomessaging/README.md#listshortcode)
-* [listTollfreeVerification](docs/sdks/twiliomessaging/README.md#listtollfreeverification)
-* [listUsAppToPerson](docs/sdks/twiliomessaging/README.md#listusapptoperson)
-* [updateBrandRegistrations](docs/sdks/twiliomessaging/README.md#updatebrandregistrations)
-* [updateDomainCertV4](docs/sdks/twiliomessaging/README.md#updatedomaincertv4)
-* [updateDomainConfig](docs/sdks/twiliomessaging/README.md#updatedomainconfig)
-* [updateService](docs/sdks/twiliomessaging/README.md#updateservice)
-* [updateTollfreeVerification](docs/sdks/twiliomessaging/README.md#updatetollfreeverification)
+### [messagingV1AlphaSender](docs/sdks/messagingv1alphasender/README.md)
+
+* [createAlphaSender](docs/sdks/messagingv1alphasender/README.md#createalphasender)
+* [deleteAlphaSender](docs/sdks/messagingv1alphasender/README.md#deletealphasender)
+* [fetchAlphaSender](docs/sdks/messagingv1alphasender/README.md#fetchalphasender)
+* [listAlphaSender](docs/sdks/messagingv1alphasender/README.md#listalphasender)
+
+### [messagingV1BrandRegistration](docs/sdks/messagingv1brandregistration/README.md)
+
+* [createBrandRegistrations](docs/sdks/messagingv1brandregistration/README.md#createbrandregistrations)
+* [fetchBrandRegistrations](docs/sdks/messagingv1brandregistration/README.md#fetchbrandregistrations)
+* [listBrandRegistrations](docs/sdks/messagingv1brandregistration/README.md#listbrandregistrations)
+* [updateBrandRegistrations](docs/sdks/messagingv1brandregistration/README.md#updatebrandregistrations)
+
+### [messagingV1BrandRegistrationOtp](docs/sdks/messagingv1brandregistrationotp/README.md)
+
+* [createBrandRegistrationOtp](docs/sdks/messagingv1brandregistrationotp/README.md#createbrandregistrationotp)
+
+### [messagingV1BrandVetting](docs/sdks/messagingv1brandvetting/README.md)
+
+* [createBrandVetting](docs/sdks/messagingv1brandvetting/README.md#createbrandvetting)
+* [fetchBrandVetting](docs/sdks/messagingv1brandvetting/README.md#fetchbrandvetting)
+* [listBrandVetting](docs/sdks/messagingv1brandvetting/README.md#listbrandvetting)
+
+### [messagingV1Deactivations](docs/sdks/messagingv1deactivations/README.md)
+
+* [fetchDeactivation](docs/sdks/messagingv1deactivations/README.md#fetchdeactivation) - Fetch a list of all United States numbers that have been deactivated on a specific date.
+
+### [messagingV1DomainCerts](docs/sdks/messagingv1domaincerts/README.md)
+
+* [deleteDomainCertV4](docs/sdks/messagingv1domaincerts/README.md#deletedomaincertv4)
+* [fetchDomainCertV4](docs/sdks/messagingv1domaincerts/README.md#fetchdomaincertv4)
+* [updateDomainCertV4](docs/sdks/messagingv1domaincerts/README.md#updatedomaincertv4)
+
+### [messagingV1DomainConfig](docs/sdks/messagingv1domainconfig/README.md)
+
+* [fetchDomainConfig](docs/sdks/messagingv1domainconfig/README.md#fetchdomainconfig)
+* [updateDomainConfig](docs/sdks/messagingv1domainconfig/README.md#updatedomainconfig)
+
+### [messagingV1DomainConfigMessagingService](docs/sdks/messagingv1domainconfigmessagingservice/README.md)
+
+* [fetchDomainConfigMessagingService](docs/sdks/messagingv1domainconfigmessagingservice/README.md#fetchdomainconfigmessagingservice)
+
+### [messagingV1ExternalCampaign](docs/sdks/messagingv1externalcampaign/README.md)
+
+* [createExternalCampaign](docs/sdks/messagingv1externalcampaign/README.md#createexternalcampaign)
+
+### [messagingV1LinkshorteningMessagingService](docs/sdks/messagingv1linkshorteningmessagingservice/README.md)
+
+* [createLinkshorteningMessagingService](docs/sdks/messagingv1linkshorteningmessagingservice/README.md#createlinkshorteningmessagingservice)
+* [deleteLinkshorteningMessagingService](docs/sdks/messagingv1linkshorteningmessagingservice/README.md#deletelinkshorteningmessagingservice)
+
+### [messagingV1LinkshorteningMessagingServiceDomainAssociation](docs/sdks/messagingv1linkshorteningmessagingservicedomainassociation/README.md)
+
+* [fetchLinkshorteningMessagingServiceDomainAssociation](docs/sdks/messagingv1linkshorteningmessagingservicedomainassociation/README.md#fetchlinkshorteningmessagingservicedomainassociation)
+
+### [messagingV1PhoneNumber](docs/sdks/messagingv1phonenumber/README.md)
+
+* [createPhoneNumber](docs/sdks/messagingv1phonenumber/README.md#createphonenumber)
+* [deletePhoneNumber](docs/sdks/messagingv1phonenumber/README.md#deletephonenumber)
+* [fetchPhoneNumber](docs/sdks/messagingv1phonenumber/README.md#fetchphonenumber)
+* [listPhoneNumber](docs/sdks/messagingv1phonenumber/README.md#listphonenumber)
+
+### [messagingV1Service](docs/sdks/messagingv1service/README.md)
+
+* [createService](docs/sdks/messagingv1service/README.md#createservice)
+* [deleteService](docs/sdks/messagingv1service/README.md#deleteservice)
+* [fetchService](docs/sdks/messagingv1service/README.md#fetchservice)
+* [listService](docs/sdks/messagingv1service/README.md#listservice)
+* [updateService](docs/sdks/messagingv1service/README.md#updateservice)
+
+### [messagingV1ShortCode](docs/sdks/messagingv1shortcode/README.md)
+
+* [createShortCode](docs/sdks/messagingv1shortcode/README.md#createshortcode)
+* [deleteShortCode](docs/sdks/messagingv1shortcode/README.md#deleteshortcode)
+* [fetchShortCode](docs/sdks/messagingv1shortcode/README.md#fetchshortcode)
+* [listShortCode](docs/sdks/messagingv1shortcode/README.md#listshortcode)
+
+### [messagingV1TollfreeVerification](docs/sdks/messagingv1tollfreeverification/README.md)
+
+* [createTollfreeVerification](docs/sdks/messagingv1tollfreeverification/README.md#createtollfreeverification)
+* [fetchTollfreeVerification](docs/sdks/messagingv1tollfreeverification/README.md#fetchtollfreeverification)
+* [listTollfreeVerification](docs/sdks/messagingv1tollfreeverification/README.md#listtollfreeverification)
+* [updateTollfreeVerification](docs/sdks/messagingv1tollfreeverification/README.md#updatetollfreeverification)
+
+### [messagingV1UsAppToPerson](docs/sdks/messagingv1usapptoperson/README.md)
+
+* [createUsAppToPerson](docs/sdks/messagingv1usapptoperson/README.md#createusapptoperson)
+* [deleteUsAppToPerson](docs/sdks/messagingv1usapptoperson/README.md#deleteusapptoperson)
+* [fetchUsAppToPerson](docs/sdks/messagingv1usapptoperson/README.md#fetchusapptoperson)
+* [listUsAppToPerson](docs/sdks/messagingv1usapptoperson/README.md#listusapptoperson)
+
+### [messagingV1UsAppToPersonUsecase](docs/sdks/messagingv1usapptopersonusecase/README.md)
+
+* [fetchUsAppToPersonUsecase](docs/sdks/messagingv1usapptopersonusecase/README.md#fetchusapptopersonusecase)
+
+### [messagingV1Usecase](docs/sdks/messagingv1usecase/README.md)
+
+* [fetchUsecase](docs/sdks/messagingv1usecase/README.md#fetchusecase)
 <!-- End SDK Available Operations -->
 
 ### Maturity
